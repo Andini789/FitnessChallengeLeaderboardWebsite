@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fitness Challenge Leaderboard</title>
+
+  <!-- CSS goes in HEAD -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>🏃 Fitness Challenge Leaderboard</h1>
+    <p>Encouraging healthy living through community activity</p>
+  </header>
+
+  <!-- ADD WORKOUT FORM -->
+  <section id="add-workout">
+    <h2>Add Your Workout</h2>
+
+    <form id="workoutForm">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" placeholder="Enter your name" required><br><br>
+
+      <label for="activity">Activity Type:</label><br>
+      <select id="activity" required>
+        <option value="">-- Select Activity --</option>
+        <option value="steps">Steps</option>
+        <option value="minutes">Minutes</option>
+        <option value="distance">Distance (km)</option>
+      </select><br><br>
+
+      <label for="amount">Amount:</label><br>
+      <input type="number" id="amount" placeholder="Enter number" required><br><br>
+
+      <label for="date">Date:</label><br>
+      <input type="date" id="date" required><br><br>
+
+      <button type="submit">Add Activity</button>
+    </form>
+
+    <p id="message"></p>
+  </section>
+
+  <!-- LEADERBOARD -->
+  <section id="leaderboard">
+    <h2>🏆 Leaderboard</h2>
+
+    <!-- OPTIONAL FILTER BUTTONS -->
+    <div id="filters">
+      <button onclick="showAll()">All</button>
+      <button onclick="filterSteps()">Steps</button>
+      <button onclick="filterMinutes()">Minutes</button>
+      <button onclick="filterDistance()">Distance</button>
+    </div>
+    
+
+    <ol id="leaderboardList"></ol>
+  </section>
+
+  <!-- RECENT ENTRIES -->
+  <section id="recent">
+    <h2>🕒 Recent Activities</h2>
+    <ul id="recentList"></ul>
+  </section>
+
+  <!-- JS goes LAST -->
+  <script src="script.js"></script>
+
+</body>
+</html>
