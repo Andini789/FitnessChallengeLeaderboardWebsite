@@ -118,3 +118,9 @@ function showAll() {
 // ===============================
 updateLeaderboard();
 updateRecent();
+
+
+// ===============================
+// FOOTER YEAR
+// ===============================
+document.getElementById("year").textContent = new Date().getFullYear();
